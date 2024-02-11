@@ -1,0 +1,21 @@
+/* 給一個int a[20]已排序的陣列，請寫一個function(a, size)能印出0~500的數字，
+   且不包含a陣列內的元素，請用最少的時間和空間複雜度完成 */
+#include<stdio.h>
+#include<stdlib.h>
+void function(int* a, int size){
+    int* ptr=a;
+    for(int i=0;i<=500;i++){
+       /*此處的i約可以等於a[i]*/
+        if(*ptr==i){
+           ptr++;
+            }
+        else{
+            printf("%d",i);
+            }
+        }
+    }
+int main(void){
+    int a[20]={1,2,4,6,19,20,88,100,235,255,280,310,322,336,388,295,400,402,407,427};
+    /*int* a是一個指向a陣列開頭的指標，a++則相當於a[i++]*/
+    function(a,20);
+    }
